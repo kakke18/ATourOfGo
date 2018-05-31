@@ -12,10 +12,13 @@ func main() {
 	s = s[:4]
 	printSlice(s)
 
+	//s = s[2:]
+	//printSlice(s)
+
 	s = s[:5]
 	printSlice(s)
 
-	s = s[2:]
+	s = s[3:]
 	printSlice(s)
 }
 

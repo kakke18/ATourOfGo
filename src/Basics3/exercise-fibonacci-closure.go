@@ -3,20 +3,21 @@ package main
 import "fmt"
 
 func fibonacci() func(int) int {
-	num, sum := 1, 1
+	i, j := 1, 0
 	return func(x int) int {
-		if(x == 0 || x == 1) {
-			return sum
-		}
-		else {
-			sum += num
-			return sum
+		if x == 0 {
+			return j
+		} else if x == 1 {
+			return i
+		} else {
+			i, j = i + j, i
+			return i
 		}
 	}
 }
 
 func main() {
-	f :- fibonacci()
+	f := fibonacci()
 	for i := 0; i < 10; i++ {
 		fmt.Println(f(i))
 	}
