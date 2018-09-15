@@ -1,2 +1,2 @@
-ATourOfGo
-Goのお勉強
+# go-tour
+Golangのお勉強
